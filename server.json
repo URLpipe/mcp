@@ -3,7 +3,7 @@
   "name": "dev.urlpipe/mcp",
   "title": "URLpipe",
   "description": "Read any page with its JavaScript run: Markdown, screenshots, metadata, console errors, Lighthouse.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "websiteUrl": "https://urlpipe.dev/mcp-server",
   "repository": {
     "url": "https://github.com/URLpipe/mcp",
