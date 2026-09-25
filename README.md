@@ -218,8 +218,8 @@ are at [urlpipe.dev/integrations](https://urlpipe.dev/integrations).
 | `fetch_markdown` | The page's main content as clean Markdown, after its JavaScript ran. **The one to use for reading.** | 1 |
 | `fetch_html` | The rendered DOM — what a browser sees, not the shell curl gets. | 1 |
 | `capture_screenshot` | A full-page screenshot, returned as an image the model can look at. Viewport, device scale, dark mode, one element by selector, PNG/JPEG/WebP. | 1 |
-| `console_logs` | `console.error` and `console.warn` during load, uncaught exceptions and unhandled promise rejections. | 1 |
-| `lighthouse_audit` | A real Lighthouse audit: performance, accessibility, best practices, SEO and Core Web Vitals. | 2 |
+| `capture_console_errors` | `console.error` and `console.warn` during load, uncaught exceptions and unhandled promise rejections. | 1 |
+| `run_lighthouse_audit` | A real Lighthouse audit: performance, accessibility, best practices, SEO and Core Web Vitals. | 2 |
 | `extract_metadata` | Open Graph, Twitter card and page metadata reconciled into one object. | 5 |
 | `extract_keywords` | The 5–15 terms that best represent the page, ranked by a language model. | 15 |
 | `summarize_page` | A short Markdown summary of the page's main content. | 17 |
