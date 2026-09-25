@@ -12,6 +12,11 @@
   <a href="https://urlpipe.dev/pricing">Pricing</a>
 </p>
 
+<p align="center">
+  <a href="https://smithery.ai/servers/urlpipe/urlpipe"><img src="https://smithery.ai/badge/urlpipe/urlpipe" alt="smithery badge"></a>
+  <a href="https://glama.ai/mcp/connectors/dev.urlpipe/urlpipe"><img src="https://glama.ai/mcp/connectors/dev.urlpipe/urlpipe/badges/score.svg" alt="URLpipe MCP connector on Glama"></a>
+</p>
+
 ---
 
 A plain `fetch` tool does an HTTP GET. On a site that builds itself in the browser —
@@ -193,6 +198,13 @@ header of `Bearer YOUR_TOKEN`. Otherwise use the open-source
   }
 }
 ```
+
+### From a directory
+
+URLpipe is listed on [Smithery](https://smithery.ai/servers/urlpipe/urlpipe) and
+[Glama](https://glama.ai/mcp/connectors/dev.urlpipe/urlpipe), and in the official MCP
+Registry as `dev.urlpipe/mcp`. On Smithery, paste your token as it is — the server
+accepts it with or without the `Bearer ` prefix.
 
 Step-by-step pages for each client, with a first prompt to try and troubleshooting,
 are at [urlpipe.dev/integrations](https://urlpipe.dev/integrations).
