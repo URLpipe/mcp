@@ -1,0 +1,29 @@
+{
+  "name": "urlpipe",
+  "displayName": "URLpipe",
+  "version": "1.2.0",
+  "description": "Read any page after its JavaScript runs: Markdown, screenshots, metadata, console errors and Lighthouse audits.",
+  "author": {
+    "name": "URLpipe",
+    "email": "contact@urlpipe.dev"
+  },
+  "homepage": "https://urlpipe.dev/mcp-server",
+  "repository": "https://github.com/URLpipe/mcp",
+  "license": "MIT",
+  "logo": "icon.svg",
+  "keywords": ["web", "browser", "markdown", "screenshot", "scraping", "lighthouse", "metadata", "mcp"],
+  "category": "integrations",
+  "tags": ["web", "markdown", "screenshot", "mcp"],
+  "mcpServers": "./mcp.json",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "URLPIPE_TOKEN": {
+        "type": "string",
+        "title": "URLpipe organization token",
+        "description": "Created at https://urlpipe.dev under Organization → MCP access (starts with up_live_). 1,000 free credits a month."
+      }
+    },
+    "required": ["URLPIPE_TOKEN"]
+  }
+}

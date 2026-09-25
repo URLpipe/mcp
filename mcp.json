@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "urlpipe": {
+      "type": "http",
+      "url": "https://urlpipe.dev/mcp",
+      "headers": {
+        "Authorization": "Bearer ${URLPIPE_TOKEN}"
+      }
+    }
+  }
+}
