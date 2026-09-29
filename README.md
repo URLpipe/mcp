@@ -201,9 +201,10 @@ header of `Bearer YOUR_TOKEN`. Otherwise use the open-source
 
 ### From a directory
 
-URLpipe is listed on [Smithery](https://smithery.ai/servers/urlpipe/urlpipe) and
-[Glama](https://glama.ai/mcp/connectors/dev.urlpipe/urlpipe), and in the official MCP
-Registry as `dev.urlpipe/mcp`. On Smithery, paste your token as it is — the server
+URLpipe is listed on [Smithery](https://smithery.ai/servers/urlpipe/urlpipe),
+[Glama](https://glama.ai/mcp/connectors/dev.urlpipe/urlpipe) and
+[cursor.directory](https://cursor.directory/plugins/urlpipe) (as a Cursor plugin), and in
+the official MCP Registry as `dev.urlpipe/mcp`. On Smithery, paste your token as it is — the server
 accepts it with or without the `Bearer ` prefix.
 
 Step-by-step pages for each client, with a first prompt to try and troubleshooting,
@@ -236,8 +237,21 @@ prompt saves a round trip.
 **A repeated request is free.** Results are kept for 30 days and reused while they are
 fresher than `max_age` (7 days by default).
 
-`initialize` and `tools/list` answer without a token, so you can see the list above
-straight from the server:
+## Prompts and resources
+
+Clients that show MCP prompts (often as slash commands) get three ready-made ones:
+
+| Prompt | Arguments | What it does |
+|---|---|---|
+| `read_page` | `url`, `question` (optional) | Reads the page as Markdown and answers the question, or summarises the page. |
+| `audit_page` | `url`, `device` (optional: `mobile` or `desktop`) | A health report: Lighthouse scores, Core Web Vitals and console errors. |
+| `compare_pages` | `url_a`, `url_b`, `focus` (optional) | Two pages side by side: what each says and how each presents itself. |
+
+The resource `urlpipe://pricing` holds the plans and what each operation costs, so an
+agent can check a price before it spends credits.
+
+`initialize`, `tools/list`, `prompts/list` and `resources/list` answer without a token,
+so you can see all of this straight from the server:
 
 ```bash
 curl -s https://urlpipe.dev/mcp \
