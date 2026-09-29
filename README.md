@@ -221,7 +221,7 @@ are at [urlpipe.dev/integrations](https://urlpipe.dev/integrations).
 | `capture_screenshot` | A full-page screenshot, returned as an image the model can look at. Viewport, device scale, dark mode, one element by selector, PNG/JPEG/WebP. | 1 |
 | `capture_console_errors` | `console.error` and `console.warn` during load, uncaught exceptions and unhandled promise rejections. | 1 |
 | `run_lighthouse_audit` | A real Lighthouse audit: performance, accessibility, best practices, SEO and Core Web Vitals. | 2 |
-| `extract_metadata` | Open Graph, Twitter card and page metadata reconciled into one object. | 5 |
+| `extract_metadata` | Everything the page declares about itself — Open Graph, Twitter cards, JSON-LD, meta tags — in one object with the same keys for every page: title, authors, dates, share image, icons, feeds and more. | 1 |
 | `extract_keywords` | The 5–15 terms that best represent the page, ranked by a language model. | 15 |
 | `summarize_page` | A short Markdown summary of the page's main content. | 17 |
 | `scrape_url` | Several of the above from one page visit. Each operation is billed as usual. | sum |
