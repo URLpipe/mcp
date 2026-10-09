@@ -29,7 +29,7 @@ errors or a Lighthouse audit.
 
 - **Hosted.** Streamable HTTP at `https://urlpipe.dev/mcp`. Nothing to install or run.
 - **One bearer token.** Can be read-only, limited to one project, or set to expire.
-- **14 tools.** The nine API operations, plus results, request history, projects and usage.
+- **15 tools.** The ten API operations, plus results, request history, projects and usage.
 - **Same credits as the HTTP API.** 1,000 free every month, no card. Cached results cost nothing.
 - **Processed in the EU.** Fetching, rendering and storage happen in Europe.
 
@@ -222,6 +222,7 @@ are at [urlpipe.dev/integrations](https://urlpipe.dev/integrations).
 | `capture_console_errors` | `console.error` and `console.warn` during load, uncaught exceptions and unhandled promise rejections. | 1 |
 | `run_lighthouse_audit` | A real Lighthouse audit: performance, accessibility, best practices, SEO and Core Web Vitals. | 2 |
 | `extract_metadata` | Everything the page declares about itself — Open Graph, Twitter cards, JSON-LD, meta tags — in one object with the same keys for every page: title, authors, dates, share image, icons, feeds and more. | 1 |
+| `detect_technologies` | What the site is built with — CMS, frameworks, analytics, CDN, web server — each with its version, a confidence and the signals that gave it away. | 1 |
 | `extract_keywords` | The 5–15 terms that best represent the page, ranked by a language model. | 15 |
 | `summarize_page` | A short Markdown summary of the page's main content. | 17 |
 | `scrape_url` | Several of the above from one page visit. Each operation is billed as usual. | sum |
