@@ -24,12 +24,12 @@ React, Vue, most docs sites and dashboards — that returns an empty shell, and 
 either says it can't read the page or guesses what was on it.
 
 URLpipe loads every page in real Chrome first, then hands your agent what it asked
-for: the page as Markdown, a screenshot it can look at, its metadata, its console
-errors or a Lighthouse audit.
+for: the page as Markdown, a screenshot it can look at, a PDF, its metadata, data in
+a schema you define, its console errors or a Lighthouse audit.
 
 - **Hosted.** Streamable HTTP at `https://urlpipe.dev/mcp`. Nothing to install or run.
 - **One bearer token.** Can be read-only, limited to one project, or set to expire.
-- **15 tools.** The ten API operations, plus results, request history, projects and usage.
+- **17 tools.** Every API operation, plus results, request history, projects and usage.
 - **Same credits as the HTTP API.** 1,000 free every month, no card. Cached results cost nothing.
 - **Processed in the EU.** Fetching, rendering and storage happen in Europe.
 
@@ -219,12 +219,14 @@ are at [urlpipe.dev/integrations](https://urlpipe.dev/integrations).
 | `fetch_markdown` | The page's main content as clean Markdown, after its JavaScript ran. **The one to use for reading.** | 1 |
 | `fetch_html` | The rendered DOM — what a browser sees, not the shell curl gets. | 1 |
 | `capture_screenshot` | A full-page screenshot, returned as an image the model can look at. Viewport, device scale, dark mode, one element by selector, PNG/JPEG/WebP. | 1 |
+| `capture_pdf` | The whole rendered page as a PDF, with its web fonts and lazy-loaded images in. Paper size, orientation, margins, scale, the print or on-screen stylesheet. | 1 |
 | `capture_console_errors` | `console.error` and `console.warn` during load, uncaught exceptions and unhandled promise rejections. | 1 |
 | `run_lighthouse_audit` | A real Lighthouse audit: performance, accessibility, best practices, SEO and Core Web Vitals. | 2 |
 | `extract_metadata` | Everything the page declares about itself — Open Graph, Twitter cards, JSON-LD, meta tags — in one object with the same keys for every page: title, authors, dates, share image, icons, feeds and more. | 1 |
 | `detect_technologies` | What the site is built with — CMS, frameworks, analytics, CDN, web server — each with its version, a confidence and the signals that gave it away. | 1 |
 | `extract_keywords` | The 5–15 terms that best represent the page, ranked by a language model. | 15 |
 | `summarize_page` | A short Markdown summary of the page's main content. | 17 |
+| `extract_data` | Data from the page in a schema you define: name the fields and get back exactly those keys, null where the page gives no value. Product details, prices, contact data, lists of items. | 24 |
 | `scrape_url` | Several of the above from one page visit. Each operation is billed as usual. | sum |
 | `get_result` | The result of an earlier request, by its token. | 0 |
 | `list_requests` | A project's recent requests, newest first. | 0 |
