@@ -1,7 +1,7 @@
 {
   "name": "urlpipe",
   "displayName": "URLpipe",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Read any page after its JavaScript runs: Markdown, screenshots, metadata, console errors and Lighthouse audits.",
   "author": {
     "name": "URLpipe",
